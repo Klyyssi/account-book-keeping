@@ -53,7 +53,7 @@ public class MainViewActivity extends AppCompatActivity {
 
     public void newAccount(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-        builder.setTitle("New loan");
+        builder.setTitle("New account");
 
         View newAccountView = getLayoutInflater().inflate(R.layout.new_account_view, null);
         final EditText txtName = (EditText) newAccountView.findViewById(R.id.txtName);
