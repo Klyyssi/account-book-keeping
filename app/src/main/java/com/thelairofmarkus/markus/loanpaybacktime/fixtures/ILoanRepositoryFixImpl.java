@@ -32,8 +32,7 @@ public class ILoanRepositoryFixImpl implements ILoanRepository {
     }
 
     @Override
-    public List<LoanLine> removeLoan(LoanLine loan) {
+    public void removeLoan(LoanLine loan) {
         loans.remove(loan);
-        return loans;
     }
 }

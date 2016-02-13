@@ -11,5 +11,5 @@ public interface ILoanRepository {
 
     List<LoanLine> getLoans();
 
-    List<LoanLine> removeLoan(LoanLine loan);
+    void removeLoan(LoanLine loan);
 }
