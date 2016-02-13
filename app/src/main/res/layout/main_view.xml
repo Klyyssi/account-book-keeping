@@ -12,11 +12,11 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New loan"
+        android:text="New account"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:onClick="newLoan"/>
+        android:onClick="newAccount"/>
 
     <ListView
         android:layout_width="wrap_content"
