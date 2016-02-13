@@ -12,4 +12,9 @@ public class LoanLine {
         this.person = person;
         this.account = account;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s [%s]", person, account);
+    }
 }

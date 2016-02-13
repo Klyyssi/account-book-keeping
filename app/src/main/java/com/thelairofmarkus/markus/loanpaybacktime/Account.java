@@ -9,4 +9,7 @@ public class Account {
     public Account(String accountNumber) {
         this.accountNumber = accountNumber;
     }
+
+    @Override
+    public String toString() { return accountNumber; }
 }
