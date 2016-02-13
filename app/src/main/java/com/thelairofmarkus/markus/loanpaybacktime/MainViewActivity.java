@@ -47,6 +47,12 @@ public class MainViewActivity extends AppCompatActivity {
         builder.show();
     }
 
+    private void showError(String errorMsg) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Watch out!").setMessage(errorMsg);
+        builder.show();
+    }
+
     private void updateLoans() {
         ListView loansList = (ListView) findViewById(R.id.listView);
 
