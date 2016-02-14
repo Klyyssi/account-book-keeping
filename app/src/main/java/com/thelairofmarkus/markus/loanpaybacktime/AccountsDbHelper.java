@@ -7,18 +7,18 @@ import android.database.sqlite.SQLiteOpenHelper;
 /**
  * Created by markus on 14.2.2016.
  */
-public class LoansDbHelper extends SQLiteOpenHelper {
+public class AccountsDbHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "Accounts.db";
 
-    public LoansDbHelper(Context context) {
+    public AccountsDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(LoansContract.LoanTable.SQL_CREATE_LOANS);
+        db.execSQL(AccountsContract.AccountTable.SQL_CREATE_ACCOUNTS);
     }
 
     @Override
@@ -28,7 +28,7 @@ public class LoansDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL(LoansContract.LoanTable.SQL_DELETE_LOANS);
+        db.execSQL(AccountsContract.AccountTable.SQL_DELETE_ACCOUNTS);
         onCreate(db);
     }
 }

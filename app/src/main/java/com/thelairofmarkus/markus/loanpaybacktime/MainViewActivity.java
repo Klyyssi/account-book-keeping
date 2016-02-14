@@ -5,21 +5,16 @@ import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
-
-import com.thelairofmarkus.markus.loanpaybacktime.fixtures.ILoanRepositoryFixImpl;
 
 public class MainViewActivity extends AppCompatActivity {
 
-    private ILoanRepository loanRepository;
+    private IAccountRepository accountRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +26,9 @@ public class MainViewActivity extends AppCompatActivity {
         registerForContextMenu(listView);
 
         //create repository
-        loanRepository = new LoanRepository(getApplicationContext());
+        accountRepository = new AccountRepository(getApplicationContext());
 
-        updateLoans();
+        refreshAccounts();
     }
 
     @Override
@@ -46,10 +41,10 @@ public class MainViewActivity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
-        ListView loansList = (ListView) findViewById(R.id.listView);
-        LoanLine selectedLine = (LoanLine) loansList.getAdapter().getItem(info.position);
-        loanRepository.removeLoan(selectedLine);
-        updateLoans();
+        ListView accountsList = (ListView) findViewById(R.id.listView);
+        AccountLine selectedLine = (AccountLine) accountsList.getAdapter().getItem(info.position);
+        accountRepository.remove(selectedLine);
+        refreshAccounts();
         return true;
     }
 
@@ -79,9 +74,9 @@ public class MainViewActivity extends AppCompatActivity {
                     return;
                 }
 
-                LoanLine accLine = new LoanLine(person, account);
-                loanRepository.put(accLine);
-                updateLoans();
+                AccountLine accLine = new AccountLine(person, account);
+                accountRepository.put(accLine);
+                refreshAccounts();
             }
         });
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -100,14 +95,14 @@ public class MainViewActivity extends AppCompatActivity {
         builder.show();
     }
 
-    private void updateLoans() {
-        ListView loansList = (ListView) findViewById(R.id.listView);
+    private void refreshAccounts() {
+        ListView accountsList = (ListView) findViewById(R.id.listView);
 
-        ArrayAdapter<LoanLine> adapter = new ArrayAdapter<LoanLine>(
+        ArrayAdapter<AccountLine> adapter = new ArrayAdapter<AccountLine>(
                 this,
                 android.R.layout.simple_list_item_1,
-                loanRepository.getLoans());
+                accountRepository.getAccounts());
 
-        loansList.setAdapter(adapter);
+        accountsList.setAdapter(adapter);
     }
 }

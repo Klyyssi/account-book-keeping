@@ -5,23 +5,23 @@ import java.util.List;
 /**
  * Created by Markus Mulkahainen on 12.2.2016.
  */
-public interface ILoanRepository {
+public interface IAccountRepository {
 
     /**
      * Adds new AccountLine to the repository
-     * @param loan account to add
+     * @param accountLine account to add
      */
-    void put(LoanLine loan);
+    void put(AccountLine accountLine);
 
     /**
      * Returns all AccountLines that this repository contains
      * @return list of AccountLines
      */
-    List<LoanLine> getLoans();
+    List<AccountLine> getAccounts();
 
     /**
      * Removes an AccountLine from the repository
-     * @param loan AccountLine to remove
+     * @param accountLine AccountLine to remove
      */
-    void removeLoan(LoanLine loan);
+    void remove(AccountLine accountLine);
 }
