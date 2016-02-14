@@ -19,7 +19,7 @@ import com.thelairofmarkus.markus.loanpaybacktime.fixtures.ILoanRepositoryFixImp
 
 public class MainViewActivity extends AppCompatActivity {
 
-    private ILoanRepository loanRepository = new ILoanRepositoryFixImpl();
+    private ILoanRepository loanRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,8 @@ public class MainViewActivity extends AppCompatActivity {
         View listView = (View) findViewById(R.id.listView);
         registerForContextMenu(listView);
 
+        //create repository
+        loanRepository = new LoanRepository(getApplicationContext());
 
         updateLoans();
     }
