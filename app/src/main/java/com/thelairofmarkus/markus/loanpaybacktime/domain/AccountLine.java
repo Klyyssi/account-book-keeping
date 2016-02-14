@@ -1,4 +1,7 @@
-package com.thelairofmarkus.markus.loanpaybacktime;
+package com.thelairofmarkus.markus.loanpaybacktime.domain;
+
+import com.thelairofmarkus.markus.loanpaybacktime.domain.Account;
+import com.thelairofmarkus.markus.loanpaybacktime.domain.Person;
 
 /**
  * Created by markus on 12.2.2016.

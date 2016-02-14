@@ -1,4 +1,4 @@
-package com.thelairofmarkus.markus.loanpaybacktime;
+package com.thelairofmarkus.markus.loanpaybacktime.domain;
 
 /**
  * Created by markus on 12.2.2016.

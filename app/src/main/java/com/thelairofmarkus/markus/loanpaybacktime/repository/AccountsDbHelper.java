@@ -1,8 +1,10 @@
-package com.thelairofmarkus.markus.loanpaybacktime;
+package com.thelairofmarkus.markus.loanpaybacktime.repository;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.thelairofmarkus.markus.loanpaybacktime.repository.AccountsContract;
 
 /**
  * Created by markus on 14.2.2016.

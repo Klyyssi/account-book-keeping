@@ -1,4 +1,6 @@
-package com.thelairofmarkus.markus.loanpaybacktime;
+package com.thelairofmarkus.markus.loanpaybacktime.repository;
+
+import com.thelairofmarkus.markus.loanpaybacktime.domain.AccountLine;
 
 import java.util.List;
 

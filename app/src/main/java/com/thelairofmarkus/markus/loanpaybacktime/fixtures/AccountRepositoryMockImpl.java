@@ -1,9 +1,9 @@
 package com.thelairofmarkus.markus.loanpaybacktime.fixtures;
 
-import com.thelairofmarkus.markus.loanpaybacktime.Account;
-import com.thelairofmarkus.markus.loanpaybacktime.IAccountRepository;
-import com.thelairofmarkus.markus.loanpaybacktime.AccountLine;
-import com.thelairofmarkus.markus.loanpaybacktime.Person;
+import com.thelairofmarkus.markus.loanpaybacktime.domain.Account;
+import com.thelairofmarkus.markus.loanpaybacktime.repository.IAccountRepository;
+import com.thelairofmarkus.markus.loanpaybacktime.domain.AccountLine;
+import com.thelairofmarkus.markus.loanpaybacktime.domain.Person;
 
 import java.util.ArrayList;
 import java.util.Arrays;

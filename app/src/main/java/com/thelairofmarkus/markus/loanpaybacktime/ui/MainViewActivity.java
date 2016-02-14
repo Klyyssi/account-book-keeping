@@ -1,4 +1,4 @@
-package com.thelairofmarkus.markus.loanpaybacktime;
+package com.thelairofmarkus.markus.loanpaybacktime.ui;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -11,6 +11,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import com.thelairofmarkus.markus.loanpaybacktime.domain.AccountLine;
+import com.thelairofmarkus.markus.loanpaybacktime.repository.AccountRepository;
+import com.thelairofmarkus.markus.loanpaybacktime.repository.IAccountRepository;
+import com.thelairofmarkus.markus.loanpaybacktime.R;
+import com.thelairofmarkus.markus.loanpaybacktime.domain.Account;
+import com.thelairofmarkus.markus.loanpaybacktime.domain.Person;
 
 public class MainViewActivity extends AppCompatActivity {
 

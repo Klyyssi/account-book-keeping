@@ -1,9 +1,13 @@
-package com.thelairofmarkus.markus.loanpaybacktime;
+package com.thelairofmarkus.markus.loanpaybacktime.repository;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.thelairofmarkus.markus.loanpaybacktime.domain.Account;
+import com.thelairofmarkus.markus.loanpaybacktime.domain.AccountLine;
+import com.thelairofmarkus.markus.loanpaybacktime.domain.Person;
 
 import java.util.ArrayList;
 import java.util.List;

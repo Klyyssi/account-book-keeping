@@ -1,4 +1,4 @@
-package com.thelairofmarkus.markus.loanpaybacktime;
+package com.thelairofmarkus.markus.loanpaybacktime.repository;
 
 import android.provider.BaseColumns;
 
